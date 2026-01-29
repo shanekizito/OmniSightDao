@@ -27,6 +27,11 @@ OmniSight is a next‑generation decentralized forecasting and truth‑discovery
   <img src="docs/images/hero_alert.png" width="100%" alt="Featured Market Alert HUD" />
   <br/>
   <i>04 // Featured Market Alert HUD</i>
+  <br/><br/>
+
+  <img src="docs/images/governance.png" width="100%" alt="Market Governance & Voter Identity" />
+  <br/>
+  <i>05 // Market Governance & Voter Identity</i>
 </div>
 
 ---
