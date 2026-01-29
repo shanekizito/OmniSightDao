@@ -27,36 +27,40 @@ We are building the infrastructure for machine‑readable truth. In a world of n
 
 ---
 
-## 🧠 Core Functionalities
+## 🧠 Core Functionalities & Mechanism
 
-### 1. Multi-Layer Market Creation Pipeline
-Anyone can propose a market, but quality is enforced through:
-- **Economic Filter**: Stake-weighted proposals to prevent spam.
-- **Template Constraints**: Markets must align with DAO-approved templates (Price, Binary, Scalar).
-- **Reputation Filter**: Proposers with better accuracy records have lower entry barriers.
+### 1. Permissionless but Intelligent Market Creation
+Anyone can propose a market via the `ProposalEngine`, but quality is strictly enforced:
+- **Template Constraints**: All markets must match a `TemplateRegistry` spec (Binary, Scalar, or Multi-Outcome), ensuring pre-defined resolution logic.
+- **Economic Filter**: Proposers stake GOV tokens. Higher reputation proposers benefit from lower collateral requirements.
+- **Quality Index (MQI)**: Markets are live-scored based on liquidity depth, trader diversity, and oracle agreement.
 
-### 2. Oracle Router & Consensus System
-Resolution requires consensus, not authority. OmniSight routes each market through:
-- **Automated Feeds**: (Chainlink/TWAP) for objective data.
-- **Optimistic Resolution**: A 24-hour window for challenges.
-- **Human Juror Quorum**: Domain-specialized jurors for subjective/complex outcomes.
+### 2. High-Fidelity Execution & Liquidity
+The `LiquidityEngine` provides more than just an AMM; it provides an **Accuracy Layer**:
+- **Innovation**: Volatility-adjusted curves and side-specific incentives ensure deep liquidity where convictions are highest.
+- **Dampening**: Oracle-aware spread dampening prevents manipulation during volatile price discovery events.
+- **LP Vaults**: `VaultManager` auto-allocates passive capital across high-MQI market bands to maximize yield and signal.
 
-### 3. Reputation Engine (Proof of Accuracy)
-Reputation is the protocol's true asset.
+### 3. Oracle Router & Multi-Layer Resolution
+Truth is determined by consensus, not authority, through the `OracleRouter`:
+- **Step 1**: Automated data ingestion (Chainlink, TWAP, or API feeds).
+- **Step 2 (Optimistic)**: A 24-hour challenge window via `ResolutionEngine` allows anyone to dispute an outcome with a bond.
+- **Step 3 (Arbitration)**: In a dispute, domain-specialized jurors ruling by accuracy-weighted voting deliver a final verdict.
+
+### 4. Reputation Engine (Proof of Accuracy)
+Reputation is the protocol's true asset, managed by the `ReputationEngine`:
 - **Domain Specialization**: Accuracy is tracked per category (e.g., "Expert in DeFi Exploit Risk").
-- **Privilege Decay**: Reputation must be maintained; silence leads to influence decay.
-- **Asymmetric Slashing**: Bad behavior (dishonest disputes) costs significantly more than honest mistakes.
+- **Privilege Decay**: Influence decays during periods of inactivity to ensure the signal remains current.
+- **Asymmetric Slashing**: Bad actors face exponential bond loss, making attacks economically irrational.
 
 ---
 
-## ⚙️ Working Mechanism
-
-### The Lifecycle of a Truth
-1. **Proposal**: A user stakes GOV tokens to propose a market spec via the `ProposalEngine`.
-2. **Deployment**: Once approved, the `MarketFactory` deploys conditional token positions (YES/NO).
-3. **Trading**: The `LiquidityEngine` manages specialized AMM curves for accuracy-aware spread dampening.
-4. **Resolution**: The `OracleRouter` triggers resolution. If contested, domain jurors ruling via the `ResolutionEngine` determine the final truth.
-5. **Settlement**: Capital is distributed, and accuracy scores are updated in the `ReputationEngine`.
+## ⚙️ The Lifecycle of a Truth
+1. **Proposal**: Market spec is submitted and validated against templates.
+2. **Deployment**: `MarketFactory` deploys conditional YES/NO token positions.
+3. **Execution**: Convicted capital weights the probability via specialized AMM curves.
+4. **Resolution**: Feeds report outcomes; optimistic windows allow for truth-correction.
+5. **Settlement**: Capital is distributed and the `ReputationEngine` updates participant accuracy graphs.
 
 ---
 
@@ -75,7 +79,7 @@ npm run dev
 ---
 
 ### 📄 Detailed Specification
-For the full smart contract architecture and protocol phase breakdown, see [omnidaospec.md](file:///c:/Users/admin/Downloads/Compressed/OmniSightDao/omnidaospec.md).
+For the full smart contract architecture and technical deep-dives into our AMM and Reputation math, see [omnidaospec.md](file:///c:/Users/admin/Downloads/Compressed/OmniSightDao/omnidaospec.md).
 
 ---
 
