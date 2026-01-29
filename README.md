@@ -6,7 +6,17 @@ OmniSight is a next‑generation decentralized forecasting and truth‑discovery
 
 ---
 
-## 🚀 The Vision
+## � Platform Preview
+
+![The Architecture of Decentralized Truth](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_3_1769729964880.png)
+![Market Analysis & Execution Interface](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_2_1769729964880.png)
+![OmniSight Discovery Feed](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_1_1769729964880.png)
+![Featured Market Alert High-Fidelity HUD](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_0_1769729964880.png)
+
+---
+
+
+## �🚀 The Vision
 
 We are building the infrastructure for machine‑readable truth. In a world of noise, OmniSight provides the signal. Our protocol allows users to weight their conviction with capital, rewarding those who are correct and creating a real-time probability layer for crypto, AI, and global events.
 
