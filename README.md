@@ -27,9 +27,40 @@ We are building the infrastructure for machine‑readable truth. In a world of n
 
 ---
 
-## ⚙️ Tech Stack & Getting Started
+## 🧠 Core Functionalities
 
-OmniSight is a high-performance React application styled with Vanilla CSS and Tailwind for a technical, HUD-like aesthetic.
+### 1. Multi-Layer Market Creation Pipeline
+Anyone can propose a market, but quality is enforced through:
+- **Economic Filter**: Stake-weighted proposals to prevent spam.
+- **Template Constraints**: Markets must align with DAO-approved templates (Price, Binary, Scalar).
+- **Reputation Filter**: Proposers with better accuracy records have lower entry barriers.
+
+### 2. Oracle Router & Consensus System
+Resolution requires consensus, not authority. OmniSight routes each market through:
+- **Automated Feeds**: (Chainlink/TWAP) for objective data.
+- **Optimistic Resolution**: A 24-hour window for challenges.
+- **Human Juror Quorum**: Domain-specialized jurors for subjective/complex outcomes.
+
+### 3. Reputation Engine (Proof of Accuracy)
+Reputation is the protocol's true asset.
+- **Domain Specialization**: Accuracy is tracked per category (e.g., "Expert in DeFi Exploit Risk").
+- **Privilege Decay**: Reputation must be maintained; silence leads to influence decay.
+- **Asymmetric Slashing**: Bad behavior (dishonest disputes) costs significantly more than honest mistakes.
+
+---
+
+## ⚙️ Working Mechanism
+
+### The Lifecycle of a Truth
+1. **Proposal**: A user stakes GOV tokens to propose a market spec via the `ProposalEngine`.
+2. **Deployment**: Once approved, the `MarketFactory` deploys conditional token positions (YES/NO).
+3. **Trading**: The `LiquidityEngine` manages specialized AMM curves for accuracy-aware spread dampening.
+4. **Resolution**: The `OracleRouter` triggers resolution. If contested, domain jurors ruling via the `ResolutionEngine` determine the final truth.
+5. **Settlement**: Capital is distributed, and accuracy scores are updated in the `ReputationEngine`.
+
+---
+
+## 💻 Get Started
 
 ### Installation
 ```bash
@@ -43,16 +74,8 @@ npm run dev
 
 ---
 
-## 🧩 Core Architecture
-OmniSight balances permissionless innovation with institutional-grade safety:
-1. **Economic Filters**: Stake-weighted proposals to prevent ambiguity.
-2. **Oracle Router**: Multi-layer resolution requiring consensus, not authority.
-3. **Market Quality Index (MQI)**: Real-time scoring based on liquidity depth and trader diversity.
-
----
-
 ### 📄 Detailed Specification
-For a deep dive into the smart contract architecture, reputation engines, and governance phases, see [omnidaospec.md](file:///c:/Users/admin/Downloads/Compressed/OmniSightDao/omnidaospec.md).
+For the full smart contract architecture and protocol phase breakdown, see [omnidaospec.md](file:///c:/Users/admin/Downloads/Compressed/OmniSightDao/omnidaospec.md).
 
 ---
 
