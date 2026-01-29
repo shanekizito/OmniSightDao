@@ -6,17 +6,32 @@ OmniSight is a next‑generation decentralized forecasting and truth‑discovery
 
 ---
 
-## � Platform Preview
+## 🖼 Platform Preview
 
-![The Architecture of Decentralized Truth](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_3_1769729964880.png)
-![Market Analysis & Execution Interface](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_2_1769729964880.png)
-![OmniSight Discovery Feed](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_1_1769729964880.png)
-![Featured Market Alert High-Fidelity HUD](file:///C:/Users/admin/.gemini/antigravity/brain/6b02c82f-cfd1-48a4-b95d-4afa1e5a526d/uploaded_media_0_1769729964880.png)
+<div align="center">
+  <img src="docs/images/architecture.png" width="100%" alt="The Architecture of Decentralized Truth" />
+  <br/>
+  <i>01 // The Architecture of Decentralized Truth</i>
+  <br/><br/>
+  
+  <img src="docs/images/market_detail.png" width="100%" alt="Market Analysis & Execution Interface" />
+  <br/>
+  <i>02 // Market Analysis & Execution Interface</i>
+  <br/><br/>
+  
+  <img src="docs/images/market_grid.png" width="100%" alt="OmniSight Discovery Feed" />
+  <br/>
+  <i>03 // OmniSight Discovery Feed</i>
+  <br/><br/>
+  
+  <img src="docs/images/hero_alert.png" width="100%" alt="Featured Market Alert HUD" />
+  <br/>
+  <i>04 // Featured Market Alert HUD</i>
+</div>
 
 ---
 
-
-## �🚀 The Vision
+## 🚀 The Vision
 
 We are building the infrastructure for machine‑readable truth. In a world of noise, OmniSight provides the signal. Our protocol allows users to weight their conviction with capital, rewarding those who are correct and creating a real-time probability layer for crypto, AI, and global events.
 
