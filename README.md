@@ -108,9 +108,6 @@ npm run dev
 
 ---
 
-### 📄 Detailed Specification
-For the full smart contract architecture and technical deep-dives into our AMM and Reputation math, see [omnidaospec.md](file:///c:/Users/admin/Downloads/Compressed/OmniSightDao/omnidaospec.md).
-
 ---
 
 > **OmniSight is not just a product. It’s a public good with private incentives.**
